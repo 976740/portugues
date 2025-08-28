@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Português para Todos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #e9244e, #ee2f2f);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+    }
+
+    .cta-button {
+      background-color: white;
+      color: #5c0303;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1em;
+      border-radius: 30px;
+      margin-top: 25px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #eee;
+    }
+
+    nav {
+      background-color: #740909;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #eb3636;
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #f06161;
+      margin-bottom: 15px;
+    }
+
+    .card ul {
+      padding-left: 20px;
+    }
+
+    .footer {
+      background-color: #ee3030;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Português para Todos</h1>
+    <p>Aprenda com qualidade, pratique com leveza e fale com confiança.</p>
+    <button class="cta-button" onclick="document.getElementById('gramatica').scrollIntoView({behavior: 'smooth'})">
+      Comece Agora
+    </button>
+  </header>
+
+  <nav>
+    <a href="#gramatica">Gramática</a>
+    <a href="#redacao">Redação</a>
+    <a href="#dicas">Dicas</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <section class="section cards">
+    <div class="card" id="gramatica">
+      <h3>📚 Gramática</h3>
+      <p>Domine as regras da língua portuguesa: classes gramaticais, conjugação verbal, concordância e muito mais.</p>
+    </div>
+
+    <div class="card" id="redacao">
+      <h3>✍️ Redação</h3>
+      <p>Dicas para escrever textos incríveis: argumentação, coesão, coerência e estrutura para ENEM e concursos.</p>
+    </div>
+
+    <div class="card" id="dicas">
+      <h3>💡 Dicas</h3>
+      <ul>
+        <li>Por que ≠ Porque: entenda a diferença</li>
+        <li>Crase: quando usar e quando evitar</li>
+        <li>Erros comuns de português no dia a dia</li>
+      </ul>
+    </div>
+
+    <div class="card" id="contato">
+      <h3>📬 Contato</h3>
+      <p>Fale conosco: <br><strong>gabryellalves976@gmail.com </strong></p>
+      <p>Siga nossas redes sociais para mais dicas!</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Português Tarcisio. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
