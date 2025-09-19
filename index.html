@@ -1,169 +1,248 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Português para Todos</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estudos de Português</title>
   <style>
     * {
       box-sizing: border-box;
     }
-
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
       color: #333;
-    }
-
-    header {
-      background: linear-gradient(to right, #460303, #ee2f2f);
-      color: white;
-      padding: 80px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.2em;
-    }
-
-    .cta-button {
-      background-color: white;
-      color: #5c0303;
-      border: none;
-      padding: 15px 30px;
-      font-size: 1em;
-      border-radius: 30px;
-      margin-top: 25px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-
-    .cta-button:hover {
-      background-color: #eee;
-    }
-
-    nav {
-      background-color: #740909;
       display: flex;
-      justify-content: center;
-      padding: 10px 0;
     }
-
+ 
+    nav {
+      width: 220px;
+      background-color: #003459;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 20px;
-      font-weight: 600;
-      transition: color 0.3s;
+      margin: 15px 0;
+      font-weight: bold;
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+      border-radius: 6px;
+      transition: background 0.3s;
     }
-
     nav a:hover {
-      color: #eb3636;
+      background-color: #ffdd57;
+      color: #003459;
     }
-
-    .section {
-      padding: 60px 20px;
-      max-width: 1200px;
-      margin: auto;
+   
+    main {
+      margin-left: 220px; 
+      flex: 1;
     }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
-
-    .card {
-      background-color: white;
-      border-radius: 15px;
-      padding: 30px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card h3 {
-      color: #f06161;
-      margin-bottom: 15px;
-    }
-
-    .card ul {
-      padding-left: 20px;
-    }
-
-    .footer {
-      background-color: #520f0f;
+    header {
+      background: linear-gradient(to right, #00416a, #0072ff);
       color: white;
       text-align: center;
-      padding: 30px 10px;
-      margin-top: 60px;
+      padding: 60px 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 1.2em;
+    }
+    section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section h2 {
+      color: #00416a;
+      margin-bottom: 20px;
+    }
+    .content {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+    p{
+      font-size: 1.5em;
+    }
+    .content img {
+      height: 300px;
+      
+      max-width: 100%;
+      border-radius: 12px;
+      margin: 15px 0;
+    }
+    li {
+      margin-bottom: 10px;
+      font-size: 1.6em;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2em;
-      }
+    footer {
+      background-color: #002233;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Português para Todos</h1>
-    <p>Aprenda com qualidade, pratique com leveza e fale com confiança.</p>
-    <button class="cta-button" onclick="document.getElementById('gramatica').scrollIntoView({behavior: 'smooth'})">
-      Comece Agora
-    </button>
-  </header>
-
   <nav>
-    <a href="#gramatica">Gramática</a>
-    <a href="#redacao">Redação</a>
-    <a href="#dicas">Dicas</a>
-    <a href="#contato">Contato</a>
+    <a href="#gramatica">📚 Gramática</a>
+    <a href="#redacao">✍️ Redação</a>
+    <a href="#dicas">💡 Dicas</a>
+    <a href="#literatura">📖 Literatura</a>
+    <a href="#video">🎥 Vídeo</a>
   </nav>
 
-  <section class="section cards">
-    <div class="card" id="gramatica">
-      <h3>📚 Gramática</h3>
-      <p>Domine as regras da língua portuguesa: classes gramaticais, conjugação verbal, concordância e muito mais.</p>
+ 
+  <main>
+    <header>
+      <h1>Estudos de Português</h1>
+      <p>Aprenda Gramática, Redação, Dicas e Literatura Brasileira!</p>
+    </header>
+
+    <section id="gramatica">
+      <div class="content">
+        <h2>📚 Gramática</h2>
+        <p>
+    A gramática é o conjunto de regras e princípios que estruturam uma língua, permitindo que as pessoas se comuniquem de forma clara e compreensível. Ela abrange aspectos como a morfologia, que estuda a formação das palavras, a sintaxe, responsável pela organização das palavras em frases e orações, e a semântica, que trata do significado das expressões.
+  </p>
+  <p>
+    Além disso, a gramática envolve a ortografia, que define a escrita correta das palavras, e a pontuação, essencial para indicar pausas, entonações e sentidos em um texto. Dominar a gramática é fundamental tanto na fala quanto na escrita, pois erros podem prejudicar a compreensão da mensagem.
+  </p>
+  <p>
+    A gramática normativa estabelece padrões considerados corretos, enquanto a gramática descritiva analisa como a língua é realmente usada no cotidiano. Estudar gramática ajuda a melhorar a interpretação de textos, a produção de textos acadêmicos e profissionais, além de desenvolver a capacidade de argumentação e expressão.
+  </p>
+  <p>
+    É importante lembrar que a gramática não se limita a regras rígidas; ela reflete a evolução da língua e se adapta às mudanças sociais e culturais. Compreender e aplicar a gramática de forma consciente contribui para uma comunicação mais eficaz, enriquecendo o vocabulário e promovendo clareza na transmissão de ideias.
+  </p>
+  <p>
+    Em resumo, a gramática é a base que sustenta a língua, permitindo que cada indivíduo expresse pensamentos, sentimentos e conhecimentos de maneira organizada, precisa e elegante.
+  </p>
+      </div>
+    </section>
+
+    <section id="redacao">
+      <div class="content">
+        <h2>✍️ Redação</h2>
+     
+  <p>
+    A redação é a prática de escrever textos de forma estruturada e coerente, permitindo que o autor comunique ideias, argumentos e opiniões de maneira clara. Ela é fundamental na educação, em exames, concursos e no desenvolvimento da comunicação escrita.
+  </p>
+  <p>
+    Uma boa redação exige atenção à organização do texto, que deve conter introdução, desenvolvimento e conclusão. Na introdução, o autor apresenta o tema e contextualiza o leitor. No desenvolvimento, são apresentados argumentos, explicações e exemplos que sustentam a ideia central. A conclusão retoma os pontos principais e finaliza o texto de forma objetiva.
+  </p>
+  <p>
+    Além da estrutura, é essencial cuidar da gramática, ortografia, pontuação e coesão textual, garantindo que o texto seja compreensível e agradável de ler. O uso adequado de conectores e frases de transição ajuda a manter a fluidez entre as ideias.
+  </p>
+  <p>
+    A prática constante de redação desenvolve habilidades de pensamento crítico, capacidade de argumentação e expressão pessoal. Também estimula a organização de ideias e a clareza na comunicação, aspectos importantes tanto na vida acadêmica quanto na profissional.
+  </p>
+  <p>
+    Em resumo, a redação não é apenas escrever palavras, mas sim construir textos que transmitam ideias de forma lógica, criativa e persuasiva, permitindo que o autor se comunique de maneira eficiente e impactante.
+  </p>
+      </div>
+    </section>
+
+    <section id="dicas">
+      <div class="content">
+        <h2>💡 Dicas</h2>
+        <ul>
+    <li><strong>1. Planeje antes de escrever:</strong> Organize suas ideias em tópicos e defina a estrutura do texto.</li>
+    <li><strong>2. Use introdução clara:</strong> Apresente o tema e contextualize o leitor de forma objetiva.</li>
+    <li><strong>3. Desenvolva argumentos:</strong> Explique suas ideias, dê exemplos e sustente seu ponto de vista.</li>
+    <li><strong>4. Conecte suas ideias:</strong> Use conectores e frases de transição para manter a fluidez do texto.</li>
+    <li><strong>5. Cuide da gramática:</strong> Ortografia, pontuação e concordância são essenciais para clareza e credibilidade.</li>
+    <li><strong>6. Seja objetivo:</strong> Evite rodeios e frases muito longas; vá direto ao ponto quando necessário.</li>
+    <li><strong>7. Varie o vocabulário:</strong> Use palavras diferentes e evite repetições para tornar o texto mais interessante.</li>
+    <li><strong>8. Conclua bem:</strong> Retome os principais pontos e finalize com uma ideia clara ou reflexão.</li>
+    <li><strong>9. Revise o texto:</strong> Sempre releia para corrigir erros e melhorar a coesão e coerência.</li>
+    <li><strong>10. Pratique constantemente:</strong> Quanto mais escrever, melhor será sua habilidade de organizar ideias e expressá-las claramente.</li>
+  </ul>
+      </div>
+    </section>
+
+   <section id="literatura">
+  <div class="content">
+    <h2>📖 Literatura Brasileira</h2>
+    <p>
+      A literatura brasileira reflete a história, a cultura e a diversidade do país. 
+      Ao longo do tempo, surgiram grandes autores e movimentos literários que marcaram a nossa língua.
+    </p>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px;">
+     
+      <div style="flex: 1 1 200px; background: #f0f0f0; padding: 15px; border-radius: 12px; text-align: center;">
+         <a href="https://pt.wikipedia.org/wiki/Machado_de_Assis" target="_blank" rel="noopener noreferrer">
+        <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQIRLVuBy3Dld4uXedd_CUD7EWwnabiZYv9NSOh9jTjqD7D8naL_kBiIAV0_IHmPT_u189GTQ" alt="Machado de Assis" style="width:100%; border-radius:8px;">
+         </a>
+        <h3>Machado de Assis</h3>
+        <p>Realismo: Dom Casmurro, Memórias Póstumas de Brás Cubas.</p>
+      </div>
+
+     
+      <div style="flex: 1 1 200px; background: #f0f0f0; padding: 15px; border-radius: 12px; text-align: center;">
+         <a href="https://g1.globo.com/pop-arte/noticia/2023/02/15/clarice-lispector-tem-entrevista-inedita-publicada-na-revista-new-yorker.ghtml" target="_blank" rel="noopener noreferrer">
+        <img src="https://s2-g1.glbimg.com/Qd0kwciwl1lqXDGDgZAdIl4J7cU=/0x0:1080x1920/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/1/y/fnGg8lTk6uZtxFAAd1vg/design-sem-nome-50-.png" alt="Clarice Lispector" style="width:100%; border-radius:8px;">
+         </a>
+        <h3>Clarice Lispector</h3>
+        <p>Contemporânea: A Hora da Estrela, Perto do Coração Selvagem.</p>
+      </div>
+
+     
+      <div style="flex: 1 1 200px; background: #f0f0f0; padding: 15px; border-radius: 12px; text-align: center;">
+         <a href="https://casavogue.globo.com/Shopping/noticia/2022/02/semana-de-22-5-obras-para-conhecer-mario-de-andrade.html" target="_blank" rel="noopener noreferrer">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZeEj4-SIIG6VRfqHNQdtkXR7cKgRWiYooyAo03J1r4KQ2Zm-13nEf3pelf_mr_RGQ0oyNh2qJX2NcTF0IEC4h_j49B_0pLKlOKfooTA" alt="Mário de Andrade" style="width:100%; border-radius:8px;">
+         </a>
+        <h3>Mário de Andrade</h3>
+        <p>Modernismo: Macunaíma, Paulicéia Desvairada.</p>
+      </div>
+
+    
+      <div style="flex: 1 1 200px; background: #f0f0f0; padding: 15px; border-radius: 12px; text-align: center;">
+        <a href="https://maralto.com.br/autores/jose-de-alencar/" target="_blank" rel="noopener noreferrer">
+        <img src="https://images.prismic.io/maralto/ZxkGnoF3NbkBX7la_Jos%C3%A9deAlencar.jpg?auto=format,compress" alt="José de Alencar" style="width:100%; border-radius:8px;">
+         </a>
+        <h3>José de Alencar</h3>
+        <p>Romantismo: O Guarani, Iracema.</p>
+       
+      </div>
     </div>
+  </div>
+</section>
 
-    <div class="card" id="redacao">
-      <h3>✍️ Redação</h3>
-      <p>Dicas para escrever textos incríveis: argumentação, coesão, coerência e estrutura para ENEM e concursos.</p>
-    </div>
 
-    <div class="card" id="dicas">
-      <h3>💡 Dicas</h3>
-      <ul>
-        <li>Por que ≠ Porque: entenda a diferença</li>
-        <li>Crase: quando usar e quando evitar</li>
-        <li>Erros comuns de português no dia a dia</li>
-      </ul>
-    </div>
+    <section id="video">
+      <div class="content">
+        <h2>🎥 Aula em Vídeo</h2>
+        <p>Confira uma explicação em vídeo sobre a Língua Portuguesa.</p>
+        <div style="text-align: center;">
+         <iframe width="900" height="635" src="https://www.youtube.com/embed/2SLxfgwGbQ0" title="A origem da língua portuguesa - Brasil Escola" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </section>
 
-    <div class="card" id="contato">
-      <h3>📬 Contato</h3>
-      <p>Fale conosco: <br><strong>gabryellalves976@gmail.com </strong></p>
-      <p>Siga nossas redes sociais para mais dicas!</p>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <p>&copy; 2025 Português Tarcisio. Todos os direitos reservados.</p>
-  </footer>
-
+    <footer>
+      <p>&copy; 2025 Português Site.</p>
+    </footer>
+  </main>
 </body>
 </html>
